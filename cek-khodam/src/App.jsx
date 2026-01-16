@@ -38,7 +38,7 @@ function App() {
   const [formData, setFormData] = useState({ nama: '', tglLahir: '', hobby: '' });
   const [result, setResult] = useState(null);
 
-  const API_URL = 'http://localhost:3000/api/cek-khodam';
+  const API_URL = 'https://khodam-api-sigma.vercel.app';
 
   const handleStart = () => setView('form');
 
