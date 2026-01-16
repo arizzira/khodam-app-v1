@@ -66,6 +66,11 @@ app.post('/api/cek-khodam', async (req, res) => {
 });
 
 // 5. Jalankan Server
-app.listen(PORT, () => {
-  console.log(`🚀 Server berjalan di http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server berjalan di http://localhost:${PORT}`);
+  });
+}
+
+// WAJIB: Export app
+module.exports = app;
